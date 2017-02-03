@@ -10,18 +10,22 @@
   <h1>Registration</h1>
   <form action="register" method="POST">
     <p>Name: </p><input type="text" name="first_name">
-    <p>Last Name: </p><input type="text" name="last_name" value="">
+    <p>Alias: </p><input type="text" name="alias" value="">
     <p>Email: </p><input type="text" name="email">
     <p>Password: </p><input type="text" name="password">
     <p>Confirm: </p><input type="text" name="confirm">
+    <p>Date of Birth: </p><input type="date" name="bday">
     <input type="submit" name="Register">
+
     {% csrf_token %}
   </form>
-
+<ul>
   {% for m in messages%}
-  {{m}}
-  <hr>
+<li> {{m}}</li>
   {%endfor%}
+
+</ul>
+
 
   <h1>Login</h1>
   <form action="login" method="POST">

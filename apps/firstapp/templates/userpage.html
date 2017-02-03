@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <a href="/logout"><p>Logout</p></a>
+    <a href="/dashboard"><p>Dashboard</p></a>
+
+    <h2>Posts by {{user.name}} </h2>
+    <h2>Count: {{quotenum}}</h2>
+
+    {% for q in quote %}
+    <h4>{{q.author}}:  {{q.message}}</h4>
+    <br>
+    {%endfor%}
+
+
+  </body>
+</html>
